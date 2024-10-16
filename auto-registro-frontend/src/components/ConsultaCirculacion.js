@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './ConsultaCirculacion.css';  // Importamos los estilos
+import { Link } from 'react-router-dom';
+import './ConsultaCirculacion.css';
 
 function ConsultaCirculacion() {
   const [consulta, setConsulta] = useState({
@@ -8,6 +9,7 @@ function ConsultaCirculacion() {
     fecha: ''
   });
   const [resultado, setResultado] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setConsulta({ ...consulta, [e.target.name]: e.target.value });
@@ -15,6 +17,7 @@ function ConsultaCirculacion() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       const response = await axios.get(`http://localhost:8080/api/autos/circulacion`, {
         params: {
@@ -25,6 +28,8 @@ function ConsultaCirculacion() {
       setResultado(response.data);
     } catch (error) {
       alert('Error al consultar la circulación: ' + error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -47,7 +52,10 @@ function ConsultaCirculacion() {
           onChange={handleChange}
           required
         />
-        <button className="boton-consulta" type="submit">Consultar</button>
+        <button className={`boton-consulta ${isLoading ? 'loading' : ''}`} type="submit" disabled={isLoading}>
+          {isLoading ? 'Consultando...' : 'Consultar'}
+        </button>
+        <Link to="/" className="boton-volver">Volver</Link>
       </form>
       {resultado && (
         <div className={`popup-resultado ${resultado.puedeCircular ? 'verde' : 'rojo'}`}>
