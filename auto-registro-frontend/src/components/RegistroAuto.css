@@ -4,69 +4,77 @@
   align-items: center;
   min-height: 100vh;
   background-color: #f0f2f5;
+  padding: 20px;
 }
 
 .formulario-registro {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   max-width: 400px;
   width: 100%;
-  margin: 0 auto;
-  padding: 30px;
+  padding: 70px;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .input-text {
-  padding: 12px;
-  border: 2px solid #e0e0e0;
-  border-radius: 5px;
+  padding: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
   font-size: 16px;
   transition: all 0.3s ease;
 }
 
 .input-text:focus {
-  border-color: #007bff;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
 .boton-registrar, .boton-volver {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 12px;
+  padding: 15px 20px;
   font-size: 16px;
-  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
   text-decoration: none;
 }
 
-.boton-registrar:hover, .boton-volver:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.boton-registrar {
+  background-color: #4caf50;
+  color: white;
 }
 
-.boton-registrar:active, .boton-volver:active {
+.boton-registrar:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.boton-registrar:active {
   transform: translateY(0);
   box-shadow: none;
 }
 
 .boton-registrar.loading {
-  background-color: #ccc;
+  background-color: #a5d6a7;
   cursor: not-allowed;
 }
 
 .boton-volver {
-  background-color: #6c757d;
+  background-color: #f0f2f5;
+  color: #4a4a4a;
+  border: 2px solid #e0e0e0;
 }
 
 .boton-volver:hover {
-  background-color: #5a6268;
+  background-color: #e6e9ed;
+  border-color: #c0c0c0;
 }
 
 @keyframes shake {
@@ -77,5 +85,5 @@
 
 .input-text:invalid:focus {
   animation: shake 0.3s;
-  border-color: #dc3545;
+  border-color: #f44336;
 }
