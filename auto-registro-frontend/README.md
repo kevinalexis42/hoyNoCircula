@@ -71,7 +71,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Project architecture
 
-proyecto-root/
+```
+auto-registro-frontend/
 │
 ├── node_modules/
 │
@@ -91,6 +92,7 @@ proyecto-root/
 │
 ├── package.json
 └── README.md
+```
 
 ### Requisitos Previos
 
