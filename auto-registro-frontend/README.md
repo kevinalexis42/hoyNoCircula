@@ -109,18 +109,27 @@ React Icons: ^5.3.0
 Axios: ^1.7.7
 React Scripts: 5.0.1
 
-### Instalacion 
-1. Clonar el repositorio
-git clone https://github.com/kevinalexis42/hoyNoCircula.git
+## Instalación
 
-2. Navegar al directorio del repositorio
+1. Clona el repositorio:
+   ```
+   git clone https://github.com/kevinalexis42/hoyNoCircula.git
+   ```
 
-cd 'dirreccion\donde\seguardo'
+2. Navega al directorio del proyecto:
+   ```
+   cd 'dirreccion\donde\seguardo'
+   ```
 
-3. Instalar las dependencias
+3. Instala las dependencias:
+   ```
+   npm install
+   ```
 
-npm install
+## Ejecución del Proyecto
 
-### Ejecución
+Para iniciar el servidor de desarrollo:
+
+```
 npm start
-
+```
