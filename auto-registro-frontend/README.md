@@ -71,22 +71,54 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Project architecture
 
-graph TD
-    A[Proyecto Raíz] --> B[node_modules]
-    A --> C[public]
-    A --> D[src]
-    D --> E[components]
-    E --> F[ConsultaCirculacion.js]
-    E --> G[ConsultaCirculacion.css]
-    E --> H[RegistroAuto.js]
-    E --> I[RegistroAuto.css]
-    D --> J[App.js]
-    D --> K[App.css]
-    D --> L[index.js]
-    D --> M[index.css]
-    A --> N[package.json]
-    A --> O[README.md]
+proyecto-root/
+│
+├── node_modules/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── ConsultaCirculacion.js
+│   │   ├── ConsultaCirculacion.css
+│   │   ├── RegistroAuto.js
+│   │   └── RegistroAuto.css
+│   │
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+│
+├── package.json
+└── README.md
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-    style E fill:#dfd,stroke:#333,stroke-width:2px
+### Requisitos Previos
+
+Node.js (versión 20.18.0)
+SQLite (versión 3.46.0)
+Visual Studio Code
+
+### Dependencias Principales
+
+React: ^18.3.1
+React DOM: ^18.3.1
+React Router DOM: ^6.27.0
+React Icons: ^5.3.0
+Axios: ^1.7.7
+React Scripts: 5.0.1
+
+### Instalacion 
+1. Clonar el repositorio
+git clone https://github.com/kevinalexis42/hoyNoCircula.git
+
+2. Navegar al directorio del repositorio
+
+cd 'dirreccion\donde\seguardo'
+
+3. Instalar las dependencias
+
+npm install
+
+### Ejecución
+npm start
+
