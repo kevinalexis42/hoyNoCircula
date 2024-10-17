@@ -5,7 +5,7 @@ Aplicación Web de registro de autos y validación de Hoy No Circula
 ## Estructura del Proyecto FRONTEND
 
 ```
-proyecto-root/
+auto-registro-frontend/
 │
 ├── node_modules/
 │
